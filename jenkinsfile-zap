@@ -108,7 +108,7 @@ pipeline {
             docker stop owasp
             docker rm owasp
             '''
-            archiveArtifacts 'target/*.jar'
+            archiveArtifacts 'report.html'
             cleanWs()
         }
     }
