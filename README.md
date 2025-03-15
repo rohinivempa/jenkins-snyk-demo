@@ -63,7 +63,14 @@ snyk --version
    - **Snyk API Token**: Select the **SNYK_TOKEN** credential.
    - **Monitor & Test Options**: Enable **Monitor** or **Test** as needed.
    - **Fail the build on vulnerabilities**: Choose as per your requirement.
-4. Save and run the build.
+4. Save and run the build. <br>
+### **OR, we can run using shell command**
+5. Add a **Build Step** --> **Execute Shell**
+```
+/usr/local/bin/snyk auth $
+/usr/local/bin/snyk test --severity-threshold=low
+```
+Save and run the build.
 
 #### **Option 2: Jenkins Pipeline (Declarative)**
 Modify your `Jenkinsfile` to include Snyk security scanning:
