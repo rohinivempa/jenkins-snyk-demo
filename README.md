@@ -45,6 +45,8 @@ curl -Lo snyk https://github.com/snyk/snyk/releases/latest/download/snyk-linux-a
 Run following command
 ```
 chmod +x snyk
+```
+```
 sudo mv snyk /usr/local/bin/snyk
 ```
 
@@ -65,10 +67,12 @@ snyk --version
    - **Fail the build on vulnerabilities**: Choose as per your requirement.
 4. Save and run the build. <br>
 ### **OR, we can run using shell command**
-5. Add a **Build Step** --> **Execute Shell**
+5. Map Variable SNYK_TOKEN with credeantials by addding a Binding in **Build Environment** --> **Use Sceret**
+6. Add a **Build Step** --> **Execute Shell**
 ```
 /usr/local/bin/snyk auth $
 /usr/local/bin/snyk test --severity-threshold=low
+/usr/local/bin/snyk monitor
 ```
 Save and run the build.
 
