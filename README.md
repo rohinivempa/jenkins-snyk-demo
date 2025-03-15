@@ -26,6 +26,35 @@ To set up **Snyk** in **Jenkins**, follow these steps:
 4. Select **Install automatically** (this downloads the Snyk CLI when required).
 5. Save the configuration.
 
+### **Installing Snyk Manually**
+Run the following command to check your system's CPU architecture:
+```
+uname -m
+```
+Expected Outputs:
+
+    x86_64 → You need the x86_64 (AMD64) version of Snyk.
+    arm64 / aarch64 → You need the ARM64 version of Snyk.
+
+```
+curl -Lo snyk https://github.com/snyk/snyk/releases/latest/download/snyk-linux
+```
+```
+curl -Lo snyk https://github.com/snyk/snyk/releases/latest/download/snyk-linux-arm64
+```
+Run following command
+```
+chmod +x snyk
+sudo mv snyk /usr/local/bin/snyk
+```
+
+Check Installation
+```
+snyk --version
+```
+
+---
+
 ### **4. Integrate Snyk with Jenkins Pipeline**
 #### **Option 1: Freestyle Project**
 1. Create a new **Freestyle Project** in Jenkins.
@@ -39,7 +68,7 @@ To set up **Snyk** in **Jenkins**, follow these steps:
 #### **Option 2: Jenkins Pipeline (Declarative)**
 Modify your `Jenkinsfile` to include Snyk security scanning:
 
-```groovy
+```
 pipeline {
     agent any
     environment {
