@@ -10,11 +10,17 @@ pipeline {
             }
 		    
 	    }
-        stage('Snyk Security Scan') {
+        stage('Snyk Security Scan manual') {
             steps {
-                sh '/usr/local/bin/snyk auth $SNYK_TOKEN'  // Authenticate Snyk
-                sh '/usr/local/bin/snyk test --json --severity-threshold=low'  // Run security scan
-                sh '/usr/local/bin/snyk monitor'  // Upload results to Snyk Dashboard
+                // sh '/usr/local/bin/snyk auth $SNYK_TOKEN'  // Authenticate Snyk
+                // sh '/usr/local/bin/snyk test --json --severity-threshold=low'  // Run security scan
+                // sh '/usr/local/bin/snyk monitor'  // Upload results to Snyk Dashboard
+		 
+            }
+        }
+	stage('Snyk Security Scan snippet') {
+            steps {
+                snykSecurity snykInstallation: 'snyk24'
             }
         }
     }
