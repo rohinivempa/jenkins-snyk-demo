@@ -26,7 +26,7 @@ To set up **Snyk** in **Jenkins**, follow these steps:
 4. Select **Install automatically** (this downloads the Snyk CLI when required).
 5. Save the configuration.
 
-**IF the synk installation is completed in jenkind we can ignore below manuall method**
+**IF the synk installation is completed in jenkins or else we are facing any version issue we can install synk if no pblm we can ignore below manuall method**
 
 ### **Installing Snyk Manually**
 Run the following command to check your system's CPU architecture:
