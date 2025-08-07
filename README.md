@@ -8,7 +8,7 @@ To set up **Snyk** in **Jenkins**, follow these steps:
 
 ### **2. Configure Snyk API Token in Jenkins**
 1. Go to **Snyk.io** and log in.
-2. Navigate to **Account Settings** → **API Token** and copy the token.
+2. On Left side go down click on profile -->Navigate to **Account Settings** → **Auth Token** and copy the token.
 3. In **Jenkins**, go to **Manage Jenkins** → **Manage Credentials**.
 4. Under **Global credentials (unrestricted)**, click **Add Credentials**.
 5. Choose:
