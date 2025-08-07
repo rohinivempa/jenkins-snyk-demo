@@ -20,7 +20,7 @@ To set up **Snyk** in **Jenkins**, follow these steps:
 6. Click **OK** to save.
 
 ### **3. Auto Install for Snyk CLI in Jenkins
-1. Go to **Jenkins** → **Manage Jenkins** → **Global Tool Configuration**.
+1. Go to **Jenkins** → **Manage Jenkins** →**Synk Installation**.
 2. Scroll down to Snyk and click **Add Snyk**.
 3. Provide a name (e.g., SnykCLI).
 4. Select **Install automatically** (this downloads the Snyk CLI when required).
